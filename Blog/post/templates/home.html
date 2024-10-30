@@ -1,0 +1,13 @@
+
+<a href="{% url 'create_post' %}">sbeve</a>
+<br>
+<br>
+
+
+{% for post in posts %}
+    <a href="{% url 'detail_post' post.id %}">Post: {{post.name}}</a>
+    <a href="{% url 'update_post' post.id %}">update</a>
+    <a href="{% url 'delete_post' post.id %}">delete</a>
+    <br>
+    <br>
+{% endfor %}
